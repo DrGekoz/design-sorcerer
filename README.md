@@ -6,6 +6,8 @@
 
 A research-first master skill that turns an AI coding agent into a visual designer, motion engineer, UX critic, asset director, and performance reviewer.
 
+**18 design libraries · 3 MCP integrations · 6 engineering skill families · 8 operational UX laws · 11 quality gates · 2 deterministic AI asset paths · 4 surface modes**
+
 <a href="https://github.com/DrGekoz/design-sorcerer/stargazers"><img src="https://img.shields.io/github/stars/DrGekoz/design-sorcerer?style=for-the-badge&color=f59e0b" alt="Stars"></a>
 <a href="https://github.com/DrGekoz/design-sorcerer/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-22c55e?style=for-the-badge" alt="License"></a>
 <img src="https://img.shields.io/badge/free--first-no%20paid%20APIs-06b6d4?style=for-the-badge" alt="Free first">
@@ -25,6 +27,20 @@ Most AI agents can produce a page that technically works. Design Sorcerer is bui
 **It forces the agent to research before it designs, choose a coherent visual thesis, build a real design system, use motion with intent, validate accessibility, generate assets deterministically, and prove the result in a browser.**
 
 The result is not just more code. It is a website or webapp with a point of view.
+
+## The numbers
+
+| Included | Count | What it covers |
+| --- | ---: | --- |
+| Design systems, libraries, and references | **18** | Motion, components, WebGL, research, visual systems, and critique |
+| MCP integrations | **3** | shadcn registry, local Refero, authenticated Google Stitch |
+| Integrated engineering skill families | **6** | Components.build, SmoothUI craft, motion performance, Vercel React, friction discipline, transparent asset generation |
+| Operational UX laws | **8** | Fitts, Hick, Jakob, chunking/cognitive load, Tesler, Doherty, Peak-End, Von Restorff |
+| Quality-gate categories | **11** | Accessibility, responsive layouts, motion, performance, assets, browser, build, and evidence checks |
+| Asset-generation paths | **2** | Codex CLI general assets and CLIProxyAPI GPT Image 2 transparent PNGs |
+| Surface modes | **4** | Persuade, Operate, Read, Experience |
+
+These counts describe the integrated guidance in this repository. A library is counted once even when both its repository and official site are credited.
 
 ## What you get
 
@@ -193,6 +209,23 @@ For every project using this skill, record in `DESIGN.md`:
 ## Credits
 
 See [`SKILL.md`](./SKILL.md) for the complete researched usage notes and full source-credit list. Design Sorcerer incorporates guidance from the projects listed above plus Vercel React/Next performance practices, SmoothUI component craft, Cult UI/Components.build architecture, and the GPT Image 2 transparent Codex CLI workflow.
+
+## About
+
+Design Sorcerer is a free-first, research-led design skill for agents that build real websites and webapps. It combines the visual vocabulary of **18 design libraries and references** with **3 MCP integrations, 6 engineering skill families, 8 operational UX laws, 4 surface modes, 2 deterministic AI asset paths, and 11 quality-gate categories**.
+
+It makes the agent answer the questions generic UI generation skips:
+
+- What is this interface trying to make the user do?
+- What visual direction is justified by the product and audience?
+- Which patterns are proven, and which are just decoration?
+- What should move, what should stay still, and why?
+- Does the layout work on a real phone?
+- Can a keyboard and screen reader use it?
+- Are the assets actually transparent and correctly validated?
+- What was researched, installed, credited, tested, and proven?
+
+Design Sorcerer does not promise magic by skipping engineering. It makes the agent do the design thinking, implementation discipline, and verification required to earn a polished result.
 
 ## License
 
