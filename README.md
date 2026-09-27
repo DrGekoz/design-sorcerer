@@ -69,7 +69,29 @@ curl -fsSL https://raw.githubusercontent.com/DrGekoz/design-sorcerer/main/SKILL.
 
 Load `design-sorcerer` whenever building or redesigning a website or webapp.
 
-### Optional project baseline
+### Install the sub-skills
+
+The installation phase also provisions the complementary design skills into the active agent’s skill directory:
+
+```bash
+bash scripts/install-subskills.sh
+```
+
+Bundled in `sub-skills/`:
+
+- Hermes Design
+- Hermes Design System
+- Transparent GPT Image 2 asset generation
+- Impeccable installer/source manifest
+- UI UX Pro Max installer/source manifest
+
+The installer is idempotent, preserves existing skills, validates every `SKILL.md`, and installs external skills only from their canonical repositories. Override the target directory when needed:
+
+```bash
+DESIGN_SORCERER_SKILLS_DIR="/absolute/path/to/skills" bash scripts/install-subskills.sh
+```
+
+## Optional project baseline
 
 Install only what the brief actually needs:
 

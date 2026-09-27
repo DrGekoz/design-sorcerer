@@ -16,6 +16,16 @@ Unified free-first design workflow for websites and webapps. Build one coherent 
 - Preserve behavior. Run typecheck/build/tests and verify in a real browser at mobile and desktop widths, including console errors and overflow.
 - Choose one mode: Persuade (landing/conversion), Operate (dashboard/tool), Read (editorial/docs), or Experience (immersive). Motion must communicate hierarchy, feedback, continuity, state, or atmosphere.
 
+## Installation phase: install sub-skills first
+
+Before design work, run the repository installer from the cloned project:
+
+```bash
+bash scripts/install-subskills.sh
+```
+
+The installer is idempotent, preserves existing target skills, installs the bundled Hermes design, design-system, and transparent-asset skills, and then installs canonical external sub-skills for Impeccable and UI UX Pro Max when `npx` is available. Set `DESIGN_SORCERER_SKILLS_DIR` when the active agent uses a non-default skill directory. Validate every target contains `SKILL.md`; report skipped or failed external installs instead of claiming completion. Never overwrite an existing skill automatically. The full inventory and source links are in `sub-skills/README.md`.
+
 ## Free-first setup
 Use the existing framework. For new React/Next/Vite work, prefer Tailwind, shadcn source components, Lucide, Motion, and only the effects needed.
 
