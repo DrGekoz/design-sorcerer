@@ -1,40 +1,61 @@
-# Design Sorcerer
+<div align="center">
 
-A research-first master skill for building distinctive, accessible, responsive, animated websites and webapps with free-first tooling.
+# DESIGN SORCERER
 
-## What it does
+### Stop shipping AI-slop. Start shipping interfaces people remember.
 
-Design Sorcerer gives an AI coding agent a unified workflow for:
+A research-first master skill that turns an AI coding agent into a visual designer, motion engineer, UX critic, asset director, and performance reviewer.
 
-- Visual direction and design research
-- Layout, typography, color systems, and responsive behavior
-- Accessible reusable React components
-- Motion design with Motion, GSAP, and Lenis
-- Progressive WebGL effects with Vanta, ShaderGradient, and Thinking Orbs
-- Source-based component installation through shadcn registries
-- Google Stitch and Refero research workflows
-- Impeccable design audits
-- React/Next performance optimization
-- Codex CLI image and asset generation
-- Transparent GPT Image 2 PNG generation through CLIProxyAPI
-- Deterministic asset validation, credits, and browser verification
+<a href="https://github.com/DrGekoz/design-sorcerer/stargazers"><img src="https://img.shields.io/github/stars/DrGekoz/design-sorcerer?style=for-the-badge&color=f59e0b" alt="Stars"></a>
+<a href="https://github.com/DrGekoz/design-sorcerer/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-22c55e?style=for-the-badge" alt="License"></a>
+<img src="https://img.shields.io/badge/free--first-no%20paid%20APIs-06b6d4?style=for-the-badge" alt="Free first">
+<img src="https://img.shields.io/badge/MCP-ready-8b5cf6?style=for-the-badge" alt="MCP ready">
+<img src="https://img.shields.io/badge/Codex-image%20generation-f43f5e?style=for-the-badge" alt="Codex image generation">
 
-## Install as a Hermes skill
+[Install](#install) · [How it works](#how-it-works) · [MCP setup](#mcp-setup) · [Codex assets](#codex-image-assets) · [Credits](#credits)
 
-Copy `SKILL.md` into the active Hermes skill directory:
+</div>
+
+---
+
+## The key selling point
+
+Most AI agents can produce a page that technically works. Design Sorcerer is built to stop the familiar failure mode: generic fonts, purple gradients, lifeless cards, random animation, broken mobile layouts, and interfaces that look like they were assembled from unrelated demos.
+
+**It forces the agent to research before it designs, choose a coherent visual thesis, build a real design system, use motion with intent, validate accessibility, generate assets deterministically, and prove the result in a browser.**
+
+The result is not just more code. It is a website or webapp with a point of view.
+
+## What you get
+
+| Capability | What Design Sorcerer enforces |
+| --- | --- |
+| Visual direction | Research, surface modes, visual thesis, references, do/don't rules |
+| Layout | Mobile-first grids, readable measure, responsive constraints, overflow handling |
+| Color | Semantic tokens, hierarchy, contrast, dark/light behavior, color-blind checks |
+| Components | Composable, source-owned, typed, documented, keyboard-accessible components |
+| Motion | Motion/GSAP/Lenis decision rules, reduced motion, cleanup, performance budgets |
+| Effects | Progressive Vanta, ShaderGradient, Thinking Orbs, Canvas, and WebGL fallbacks |
+| MCP | shadcn, local Refero, and authenticated Stitch setup/usage instructions |
+| Images | Codex CLI generation and deterministic transparent GPT Image 2 assets |
+| Quality | Impeccable, Vercel React, Components.build, browser, and accessibility reviews |
+| Evidence | Exact packages, versions, prompts, credits, and verified/unverified results |
+
+## Install
+
+### Hermes
 
 ```bash
 mkdir -p "$LOCALAPPDATA/hermes/skills/web-design/design-sorcerer"
-cp SKILL.md "$LOCALAPPDATA/hermes/skills/web-design/design-sorcerer/SKILL.md"
+curl -fsSL https://raw.githubusercontent.com/DrGekoz/design-sorcerer/main/SKILL.md \
+  -o "$LOCALAPPDATA/hermes/skills/web-design/design-sorcerer/SKILL.md"
 ```
 
-The skill is designed to be loaded when building or redesigning a website or webapp.
+Load `design-sorcerer` whenever building or redesigning a website or webapp.
 
-## Free-first baseline
+### Optional project baseline
 
-The skill prefers local and free tools. It uses public shadcn registries, local Refero catalog search, Impeccable, CSS/SVG, and existing project dependencies before authenticated or paid services.
-
-Typical optional setup:
+Install only what the brief actually needs:
 
 ```bash
 npm install motion lenis gsap
@@ -44,26 +65,69 @@ npx impeccable install --scope=project
 npx impeccable init
 ```
 
-Do not install every package by default. Select tools according to the design brief.
+Do not blindly install every library. The skill selects tools according to the surface, visual direction, performance budget, and existing stack.
 
-## MCPs
+## How it works
 
-The skill contains exact configuration for:
+```text
+RESEARCH -> DIRECTION -> TOKENS -> LAYOUT -> COMPONENTS -> MOTION -> ASSETS -> AUDIT -> BROWSER PROOF
+```
 
-- shadcn MCP for public component registries
-- Local no-token Refero MCP
-- Google Stitch MCP when the user has authorized Stitch access
+1. Inspect the existing framework, routes, assets, fonts, tokens, dependencies, and animation system.
+2. Identify the surface mode: Persuade, Operate, Read, or Experience.
+3. Research real interface patterns with Refero or Stitch when available.
+4. Define `PRODUCT.md` and `DESIGN.md` for substantial work.
+5. Build semantic structure, tokens, typography, spacing, and responsive layout first.
+6. Add source-owned accessible components.
+7. Select the smallest appropriate motion/effects stack.
+8. Generate only missing assets, validate them, and preserve originals.
+9. Run accessibility, performance, framework, and design audits.
+10. Verify the real running page at mobile and desktop widths.
 
-It includes Codex, Claude Code, Cursor, and VS Code configuration examples, verification commands, secret handling, and rules for skipping paid/token services by default.
+## MCP setup
 
-## Codex image generation
+The skill includes exact setup and usage instructions for:
 
-The skill supports two distinct paths:
+- **shadcn MCP**: free local component-registry discovery for shadcn, Kokonut UI, Cult UI, and Neobrutalism.
+- **Refero local MCP**: free no-token design-style research mirror.
+- **Google Stitch MCP**: optional authenticated integration for Stitch project and Design DNA inspection.
 
-1. Codex CLI for reference-guided opaque or general image generation.
-2. CLIProxyAPI plus GPT Image 2 for transparent PNGs.
+The agent must inspect existing MCP configuration first, install only missing servers, never invent credentials, and verify each server with a harmless request before using it.
 
-The transparent route uses:
+Example shadcn MCP config for Codex:
+
+```toml
+[mcp_servers.shadcn]
+command = "npx"
+args = ["shadcn@latest", "mcp"]
+```
+
+Example free Refero setup:
+
+```bash
+npx -y fidgetcoding-refero-mcp
+```
+
+Stitch is optional and authenticated. It is never enabled silently and never used to bypass accessibility, performance, or browser verification.
+
+## Codex image assets
+
+Design Sorcerer supports two deliberately separate image paths:
+
+### General/reference-guided assets
+
+- Codex CLI
+- Isolated per-call `CODEX_HOME`
+- Separate `-i <absolute-path>` reference arguments
+- `/imagegen` sent through stdin
+- Exact `Saved at:` output parsing
+- No shared generated-image directory
+- No newest-file fallback
+- PIL/file validation before copying into the project
+
+### Transparent assets
+
+Transparent logos, icons, stickers, product cutouts, and UI glyphs use the verified local CLIProxyAPI route:
 
 ```text
 POST http://localhost:8317/v1/images/generations
@@ -73,50 +137,63 @@ output_format: png
 response_format: b64_json
 ```
 
-Every output must be decoded and validated for PNG format, RGBA mode, alpha extrema `(0,255)`, dimensions, bounds, halos, and unwanted backgrounds.
+Every result must be decoded and checked for:
 
-Codex image calls use isolated `CODEX_HOME` directories, separate `-i` reference arguments, `/imagegen` through stdin, deterministic `Saved at:` output handling, and no newest-file fallback.
+- Real PNG format
+- RGBA-compatible mode
+- Alpha extrema `(0,255)`
+- Correct dimensions and aspect ratio
+- Valid non-transparent bounds
+- No white/black background remnants
+- No halo, clipping, duplicate object, watermark, or accidental text
 
-## Integrated sources
+A file is never treated as transparent because its filename says `.png` or because the API request included `background: transparent`.
 
-The skill incorporates research and usage guidance from:
+## Design stack covered
 
-- Lenis
-- Motion
-- Kokonut UI
-- Componentry
-- GSAP
-- Vanta
-- React Bits
-- Thinking Orbs
-- Magic UI
-- SmoothUI
-- Neobrutalism
-- RetroUI
-- Refero Styles
-- Google Stitch
-- Cult UI
-- ShaderGradient
-- Laws of UX
-- Impeccable
-- Components.build
-- SmoothUI component craft
-- SmoothUI motion-performance rules
-- Vercel React/Next performance guidance
-- GPT Image 2 transparent Codex CLI workflow
+### Motion and atmosphere
 
-## Credits and licensing
+[Lenis](https://github.com/darkroomengineering/lenis) · [Motion](https://motion.dev) · [GSAP](https://github.com/greensock/GSAP) · [Vanta](https://github.com/tengbao/vanta) · [ShaderGradient](https://github.com/ruucm/shadergradient) · [Thinking Orbs](https://github.com/Jakubantalik/thinking-orbs)
 
-See the credits section in `SKILL.md` for source links. Check the license of every dependency and record the exact packages, versions, components, prompts, and external references used by each project.
+### Components and systems
 
-## Workflow summary
+[Kokonut UI](https://kokonutui.com) · [Componentry](https://componentry.dev) · [React Bits](https://reactbits.dev) · [Magic UI](https://magicui.design) · [SmoothUI](https://smoothui.dev) · [Cult UI](https://www.cult-ui.com) · [Neobrutalism](https://neobrutalism.com) · [RetroUI](https://retroui.io)
 
-1. Inspect the project and available tools.
-2. Research the product surface and visual direction.
-3. Define `PRODUCT.md` and `DESIGN.md` for substantial work.
-4. Establish semantic structure, tokens, layout, typography, and responsive behavior.
-5. Build accessible source-owned components.
-6. Add purposeful motion with reduced-motion support.
-7. Generate and validate assets only when needed.
-8. Run typecheck, tests, production build, and real browser checks.
-9. Record MCPs, packages, credits, decisions, and verified/unverified results.
+### Research and quality
+
+[Refero Styles](https://styles.refero.design) · [Google Stitch](https://stitch.withgoogle.com) · [Laws of UX](https://lawsofux.com) · [Impeccable](https://impeccable.style) · [Components.build](https://components.build)
+
+## Quality gates
+
+Before calling a surface complete, the agent must check:
+
+- Semantic landmarks, keyboard flow, ARIA, focus restoration, and screen-reader states
+- WCAG contrast and visible focus
+- 320px/390px mobile, tablet, desktop, and wide desktop layouts
+- Loading, empty, error, overflow, and slow-network states
+- Reduced-motion mode and touch equivalents for hover behavior
+- Animation cleanup, offscreen pausing, no layout thrashing, and no raw scroll polling
+- React/Next waterfalls, bundle size, dynamic imports, serialization, and third-party loading
+- Typecheck, lint, focused tests, production build, console errors, and network failures
+- Exact asset dimensions, alpha, bounds, compression, and licensing
+
+## Project handoff
+
+For every project using this skill, record in `DESIGN.md`:
+
+- Product and audience
+- Surface mode and visual thesis
+- Reference links and credits
+- Palette roles, type scale, spacing, radius, shadows, and motion tokens
+- Components, packages, versions, MCPs, and licenses
+- Image prompts, references, model/routes, and validation results
+- Accessibility and responsive decisions
+- Browser/test commands and verified versus unverified checks
+
+## Credits
+
+See [`SKILL.md`](./SKILL.md) for the complete researched usage notes and full source-credit list. Design Sorcerer incorporates guidance from the projects listed above plus Vercel React/Next performance practices, SmoothUI component craft, Cult UI/Components.build architecture, and the GPT Image 2 transparent Codex CLI workflow.
+
+## License
+
+MIT. Third-party projects, names, logos, code, and documentation remain under their respective licenses. Check and record the license of anything copied into a project.
